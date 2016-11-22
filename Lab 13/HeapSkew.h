@@ -64,8 +64,9 @@ BinaryTree<T>* HeapSkew<T>::merge(BinaryTree<T>* left, BinaryTree<T>* right)
   else if(right->isEmpty())
 	  return left;
   else if(leftRoot < rightRoot)
-  {
 	  merge(right, left);
+  else
+  {
 	  left->attachRightSubtree(LL);
 	  if(LR->isEmpty())
 	  {
